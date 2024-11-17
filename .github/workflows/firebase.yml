@@ -1,0 +1,14 @@
+name: Deploy the main branch
+# on: push
+
+on: push
+jobs:
+  main:
+    name: Deploy to Firebase
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: lowply/deploy-firebase@v0.0.5
+        env:
+          FIREBASE_TOKEN: 1//09CQ-8VQnxckGCgYIARAAGAkSNwF-L9IrXdmibW9zoN_e4hwusBeX6xLQMilLBo11doiVgoug0rCNo0yYsdmUyhl6OI-g50QYcv0
+          FIREBASE_PROJECT: guneslerpark
